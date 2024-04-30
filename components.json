@@ -1,0 +1,15 @@
+{
+  "aliases": {
+    "components": "~/components",
+    "utils": "~/lib/utils"
+  },
+  "framework": "vite",
+  "style": "default",
+  "tailwind": {
+    "baseColor": "neutral",
+    "config": "unocss.config.ts",
+    "css": "src/styles/main.css",
+    "cssVariables": true
+  },
+  "typescript": true
+}

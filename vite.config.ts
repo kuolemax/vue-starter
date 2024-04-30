@@ -8,6 +8,7 @@ import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Layouts from 'vite-plugin-vue-layouts'
+import autoprefixer from 'autoprefixer'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -48,6 +49,8 @@ export default defineConfig({
 
     // https://github.com/antfu/unocss
     UnoCSS(),
+
+    autoprefixer(),
 
     // https://github.com/vuejs/devtools-next
     VueDevTools(),
