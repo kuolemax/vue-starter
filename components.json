@@ -8,7 +8,7 @@
   "tailwind": {
     "baseColor": "neutral",
     "config": "unocss.config.ts",
-    "css": "src/styles/main.css",
+    "css": "~/styles/main.css",
     "cssVariables": true
   },
   "typescript": true

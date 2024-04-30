@@ -6,14 +6,9 @@ body,
   padding: 0;
 }
 
-html.dark {
-  background: #121212;
-}
 
-
-
-@layer theme-blue {
-  :root {
+@layer base {
+  .theme-blue {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -44,7 +39,7 @@ html.dark {
     --radius: 0.5rem;
   }
 
-  .dark {
+  .dark .theme-blue {
     --background:222.2 84% 4.9%;
     --foreground:210 40% 98%;
 
@@ -73,11 +68,8 @@ html.dark {
     --input:217.2 32.6% 17.5%;
     --ring:224.3 76.3% 48%;
   }
-}
 
-
-@layer theme-green {
-  :root {
+  .theme-green {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
@@ -108,7 +100,7 @@ html.dark {
     --radius: 0.5rem;
   }
 
-  .dark {
+  .dark .theme-green {
     --background:20 14.3% 4.1%;
     --foreground:0 0% 95%;
 
@@ -136,5 +128,14 @@ html.dark {
     --border:240 3.7% 15.9%;
     --input:240 3.7% 15.9%;
     --ring:142.4 71.8% 29.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
