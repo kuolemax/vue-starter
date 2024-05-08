@@ -2,6 +2,7 @@ import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router/auto'
 import { setupLayouts } from 'virtual:generated-layouts'
+import PrimeVueUnstyled from 'primevue/config'
 import App from './App.vue'
 
 import '@unocss/reset/tailwind.css'
@@ -17,4 +18,5 @@ const pinia = createPinia()
 createApp(App)
   .use(router)
   .use(pinia)
+  .use(PrimeVueUnstyled)
   .mount('#app')
