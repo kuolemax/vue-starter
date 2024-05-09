@@ -7,7 +7,11 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BarLineChart: typeof import('./src/components/base-analysis/BarLineChart.vue')['default']
     Button: typeof import('./src/components/ui/button/Button.vue')['default']
+    Checkbox: typeof import('./src/components/ui/checkbox/Checkbox.vue')['default']
+    ComplexDataTable: typeof import('./src/components/base-analysis/ComplexDataTable.vue')['default']
+    DataTableDemoColumn: typeof import('./src/components/base-analysis/DataTableDemoColumn.vue')['default']
     DropdownMenu: typeof import('./src/components/ui/dropdown-menu/DropdownMenu.vue')['default']
     DropdownMenuCheckboxItem: typeof import('./src/components/ui/dropdown-menu/DropdownMenuCheckboxItem.vue')['default']
     DropdownMenuContent: typeof import('./src/components/ui/dropdown-menu/DropdownMenuContent.vue')['default']
@@ -23,6 +27,7 @@ declare module 'vue' {
     DropdownMenuSubTrigger: typeof import('./src/components/ui/dropdown-menu/DropdownMenuSubTrigger.vue')['default']
     DropdownMenuTrigger: typeof import('./src/components/ui/dropdown-menu/DropdownMenuTrigger.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Input: typeof import('./src/components/ui/input/Input.vue')['default']
     ModeToggle: typeof import('./src/components/ModeToggle.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
@@ -37,6 +42,16 @@ declare module 'vue' {
     SelectSeparator: typeof import('./src/components/ui/select/SelectSeparator.vue')['default']
     SelectTrigger: typeof import('./src/components/ui/select/SelectTrigger.vue')['default']
     SelectValue: typeof import('./src/components/ui/select/SelectValue.vue')['default']
+    Table: typeof import('./src/components/ui/table/Table.vue')['default']
+    TableBody: typeof import('./src/components/ui/table/TableBody.vue')['default']
+    TableCaption: typeof import('./src/components/ui/table/TableCaption.vue')['default']
+    TableCell: typeof import('./src/components/ui/table/TableCell.vue')['default']
+    TableEmpty: typeof import('./src/components/ui/table/TableEmpty.vue')['default']
+    TableFooter: typeof import('./src/components/ui/table/TableFooter.vue')['default']
+    TableHead: typeof import('./src/components/ui/table/TableHead.vue')['default']
+    TableHeader: typeof import('./src/components/ui/table/TableHeader.vue')['default']
+    TableRow: typeof import('./src/components/ui/table/TableRow.vue')['default']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
+    VChart: typeof import('vue-echarts')['default']
   }
 }

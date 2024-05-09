@@ -2,5 +2,5 @@
 </script>
 
 <template>
-  <RouterView />
+  <RouterView bg-background />
 </template>

@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router/auto'
 import { setupLayouts } from 'virtual:generated-layouts'
 import App from './App.vue'
+import 'echarts'
 
 import '@unocss/reset/tailwind.css'
 import '~/styles/main.css'

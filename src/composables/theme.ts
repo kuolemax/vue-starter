@@ -11,5 +11,6 @@ export function switchTheme(theme: string) {
 
   // 添加新class
   body.classList.add(`theme-${theme}`)
-  useStorage('theme', theme)
+  const themeState = useStorage('theme', '')
+  themeState.value = theme
 }

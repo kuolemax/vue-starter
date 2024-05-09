@@ -23,7 +23,7 @@ export default defineConfig({
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
     Layouts(),
 
-    // https://github.com/antfu/unplugin-auto-import
+    // https://github.com/unplugin/unplugin-auto-import
     AutoImport({
       imports: [
         'vue',
@@ -38,16 +38,24 @@ export default defineConfig({
       dirs: [
         'src/composables',
         'src/stores',
+        'src/lib/',
       ],
       vueTemplate: true,
     }),
 
-    // https://github.com/antfu/vite-plugin-components
+    // https://github.com/unplugin/unplugin-vue-components
     Components({
       dts: './components.d.ts',
+      resolvers: [
+        (componentName) => {
+          if (componentName === 'VChart')
+            return 'vue-echarts'
+        },
+      ],
+      dirs: ['src/components'],
     }),
 
-    // https://github.com/antfu/unocss
+    // https://github.com/unocss/unocss
     UnoCSS(),
 
     autoprefixer(),
