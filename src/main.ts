@@ -2,10 +2,12 @@ import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router/auto'
 import { setupLayouts } from 'virtual:generated-layouts'
-import PrimeVueUnstyled from 'primevue/config'
+import PrimeVue from 'primevue/config'
 import App from './App.vue'
 
+import Lara from '~/presets/lara'
 import '@unocss/reset/tailwind.css'
+import 'primeicons/primeicons.css'
 import '~/styles/main.css'
 import 'virtual:uno.css'
 
@@ -18,5 +20,9 @@ const pinia = createPinia()
 createApp(App)
   .use(router)
   .use(pinia)
-  .use(PrimeVueUnstyled)
+  .use(PrimeVue, {
+    unstyled: true,
+    ripple: true,
+    pt: Lara,
+  })
   .mount('#app')

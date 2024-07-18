@@ -1,5 +1,5 @@
-import vue from '@vitejs/plugin-vue'
 import path from 'node:path'
+import vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { PrimeVueResolver } from 'unplugin-vue-components/resolvers'
@@ -46,8 +46,9 @@ export default defineConfig({
     Components({
       dts: './components.d.ts',
       resolvers: [
-        PrimeVueResolver()
-      ]
+        PrimeVueResolver(),
+      ],
+      dirs: ['src/components'],
     }),
 
     // https://github.com/antfu/unocss
